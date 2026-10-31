@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Bale Web Custom Layout",
+  "version": "1.0.0",
+  "description": "Applies a wider desktop sidebar and full-width layout on web.bale.ai.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.bale.ai/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

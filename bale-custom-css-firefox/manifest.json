@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Bale Web Custom Layout",
+  "version": "1.0.0",
+  "description": "Applies a wider, resizable desktop sidebar and full-width layout on web.bale.ai.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "bale-web-custom-layout@local"
+    }
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.bale.ai/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
